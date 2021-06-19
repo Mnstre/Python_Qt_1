@@ -5,6 +5,6 @@ Search tree GUI
 
 Development in Qt for Python
 
-It's only an excersive to practice Python skills learning at the same tame something about Qt.
+It's only an excersive to practice Python skills learning at the same time something about Qt.
 
 -Mnstre @2021
