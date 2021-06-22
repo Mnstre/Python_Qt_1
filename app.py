@@ -1,25 +1,19 @@
-import sys
-from PySide6.QtWidgets import QApplication, QDialog, QLineEdit, QPushButton, QVBoxLayout
+# Seacrh Tree in Python
+#
+class Nodo:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
-class Form(QDialog):
-    def __init__(self, parent=None):
-        super(Form, self).__init__(parent)
-        self.setWindowTitle("My Form")
+class Vector:
+    def __init__(self, start, end):
+        self.start = start
+        self.end = end
 
-        self.edit = QLineEdit("Write my name here..")
-        self.button = QPushButton("Show Greetings")
+class Tree:
+    def __init__(self):
+        self.nNodos = None
 
-        layout = QVBoxLayout(self)
-        layout.addWidget(self.edit)
-        layout.addWidget(self.button)
-
-        self.button.clicked.connect(self.greetings)
-
-    def greetings(self):
-        print(f"Hello {self.edit.text()}")
-
-if __name__=='__main__':
-    app = QApplication(sys.argv)
-    form = Form()
-    form.show()
-    sys.exit(app.exec())
+    def addNodo(self, x, y):
+        nodo = Nodo(x, y)
+    
