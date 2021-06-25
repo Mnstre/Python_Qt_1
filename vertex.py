@@ -2,12 +2,16 @@
 #   - Constructor and functions
 class Vertex:
     def __init__(self, key):
+        self.__id = key
         self.x = None
         self.y = None
-        self.id = key
 
-    def createVertex(self):
+    def __createVertex(self):
         pass
 
     def getId(self):
-        return self.id
+        return self.__id
+
+class VertexFactory(Vertex):
+    def createVertex(id):
+        return Vertex(id)
