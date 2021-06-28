@@ -6,9 +6,6 @@ class Vertex:
         self.x = None
         self.y = None
 
-    def __createVertex(self):
-        pass
-
     def getId(self):
         return self.__id
 
