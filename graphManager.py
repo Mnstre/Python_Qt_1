@@ -11,15 +11,19 @@ class GraphManager:
     
     def __createVertex(self, vFactory):
         v = vFactory.createFactory(self.__m_keyGen)
-
+        
         self.__m_keyGen +=1
     
     def loadGraph(self, file, vFactory, eFactory):
         file1 = open("graph.txt", "r")
-        self.__nVertex = file1[0]
-        if self.__nVertex:
-            for iterator in file1[1:self.__nVertex]:
-                nodo = self.__createVertex(vFactory)
+        contador = 0
+        for iterator in file1:
+            if contador == 1:
+                self.__nVertex = iterator
+                for iterator in file1[1:self.__nVertex]:
+                    nodo = self.__createVertex(vFactory)
+                    
+            contador += 1
         x = None
         y = None
         ########
