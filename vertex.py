@@ -1,8 +1,10 @@
 #Clase Vertex
 #   - Constructor and functions
+
+
 class Vertex:
-    def __init__(self, key):
-        self.__id = key
+    def __init__(self):
+        self.__id = None
         self.x = None
         self.y = None
 
